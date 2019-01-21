@@ -1,5 +1,9 @@
 # TechnosWebTP1
 
+Antoine Lamé
+TD n°4
+OCRES - ECE Paris
+
 ## Instructions
 
 Créer un site CV **présentable** qui pourra être mis en ligne par vos soins

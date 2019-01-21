@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CV - TP ECE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</head>
+<body>
+
+    <header>
+        <img class="profile-pic" src="images/profile.jpg">
+        <h1>Antoine Lamé</h1>
+        <p>Étudiant ECE Paris</p>
+    </header>
+
+    <nav>
+        <a href="#about-me" class="current">À propos</a>
+        <a href="#resume">Mon CV</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="about-me" class="current">
+        <p class="intro">
+            Je suis <strong>étudiant</strong> ingénieur à l'ECE Paris et <strong>développeur web</strong> freelance
+            depuis 3 ans, à la recherche d'un stage de 4 à 6 mois.
+        </p>
+        <p class="secondary">
+            Vous pouvez accéder à <a href="http://antoinelame.fr" target="_blank">mon portfolio</a>, ou lire quelques
+            petits articles que <a href="http://blog.antoinelame.fr" target="_blank">j'ai écrit</a>.
+        </p>
+    </main>
+
+    <main id="resume">
+        <h2>Expériences</h2>
+        <section class="item">
+            <span class="date">2018</span>
+            <h4>Mentor — @OpenClassrooms</h4>
+            <p>
+                Accompagnement des étudiants sur les projets web des parcours diplômants OpenClassrooms.
+            </p>
+        </section>
+        <section class="item">
+            <span class="date">2018</span>
+            <h4>Vision'air — Freelance</h4>
+            <p>
+                Développement d'une plateforme web pour surveiller le fonctionnement de centrales de traitement
+                d'air installées. Les responsables d'usines peuvent suivre en temps réel les indicateurs de température,
+                pression et humidité de leurs centrales. 
+            </p>
+        </section>
+        <section class="item">
+            <span class="date">2017</span>
+            <h4>Responsable des consultants — @JEECE</h4>
+            <p>
+                Responsable des consultants et du pôle SI de JEECE — Membre du Conseil d’Administration.<br>
+                Recrutement et management des consultants, analyse des projets clients, devis, suivi des projets.
+            </p>
+        </section>
+        <section class="item">
+            <span class="date">2017</span>
+            <h4>Manyatta — Freelance</h4>
+            <p>
+                Développement d'une plateforme web permettant de suivre l'activité de MANYATTA, un espace de co-working à Paris.<br>
+                Fonctionnalités : gestion des clients, des paiements, des produits, de l'emploi du temps et des tuteurs.<br>
+                <a href="#ex1" rel="modal:open">Voir la vidéo</a>
+            </p>
+        </section>
+        <section class="item">
+            <span class="date">2017</span>
+            <h4>Stage — @BnF</h4>
+            <p>
+                Évolution d'un module de contrôle des OCR (reconnaissance optique des caractères) afin qu'il puisse
+                prendre en charge de nouveaux formats d'image (JPEG2000 notamment). Java, Vision par ordinateur, OpenCV.
+            </p>
+        </section>
+        <section class="item">
+            <span class="date">2016</span>
+            <h4>Consultant — @JEECE</h4>
+            <p>
+                Missions réalisées : site web de Parrot Automotive, intégration web pour une agence de RH, évolution
+                d'un site d'annonces immobilières
+            </p>
+        </section>
+
+        <h2>Formations</h2>
+        <section class="item">
+            <span class="date">2017</span>
+            <h4>Keimyung University</h4>
+            <p>
+                Semestre universitaire en Corée du Sud. Cours de web, Java, Python et Coréen.
+            </p>
+        </section>
+        <section class="item">
+            <span class="date">2015</span>
+            <h4>ECE Paris</h4>
+            <p>
+                École d’ingénieurs généraliste dans les technologies du numérique
+            </p>
+        </section>
+    </main>
+
+    <main id="contact">
+        <form>
+            <div class="details">
+                <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                <input type="email" name="email" id="name" placeholder="Adresse e-mail" required>
+            </div>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+
+    <div id="ex1" class="modal">
+        <p>Présentation de l'application web réaliée.</p>
+        <video controls="controls">
+            <source src="http://antoinelame.fr/projects/manyatta/demo.mp4" type="video/mp4">
+            <source src="http://antoinelame.fr/projects/manyatta/demo.webm" type="video/webm">
+        </video>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+    
+            $('nav a').click(function(e) {
+                e.preventDefault();
+
+                var tab = $(this).attr('href');
+                console.log(tab);
+
+                $('nav a').removeClass('current');
+                $('main').removeClass('current');
+
+                $(this).addClass('current');
+                $(tab).addClass('current');
+            })
+
+        })
+    </script>
+</body>
+</html>
